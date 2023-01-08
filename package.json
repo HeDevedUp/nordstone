@@ -1,0 +1,26 @@
+{
+  "name": "nord__api",
+  "version": "1.0.0",
+  "description": "Simple calculator api for react native app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/Layoolar/nordstone.git"
+  },
+  "keywords": [
+    "API",
+    "Calculator"
+  ],
+  "author": "Olayiwola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Layoolar/nordstone/issues"
+  },
+  "homepage": "https://github.com/Layoolar/nordstone#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
