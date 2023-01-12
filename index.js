@@ -7,27 +7,27 @@ app.get("/", (req, res) => {
 });
 
 app.post('/calculate', (req, res) => {
-  const { operator, operand1, operand2 } = req.body
-  if (!operator || !operand1 || !operand2) {
+  const { numberOne, numberTwo, operator } = req.body
+  if (!operator || !numberOne || !numberTwo) {
     return res.status(400).send({ error: 'Invalid request' })
   }
 
   let result
   switch (operator) {
-    case 'add':
-      result = operand1 + operand2
+    case '+':
+      result = numberOne + numberTwo
       break
-    case 'subtract':
-      result = operand1 - operand2
+    case '-':
+      result = numberOne - numberTwo
       break
-    case 'multiply':
-      result = operand1 * operand2
+    case '*':
+      result = numberOne * numberTwo
       break
-    case 'divide':
-      if (operand2 === 0) {
+    case '/':
+      if (numberTwo === 0) {
         return res.status(400).send({ error: 'Cannot divide by zero' })
       }
-      result = operand1 / operand2
+      result = numberOne / numberTwo
       break
     default:
       return res.status(400).send({ error: 'Invalid operator' })
